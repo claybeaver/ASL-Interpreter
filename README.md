@@ -2,7 +2,7 @@
 
 ### Project 3 – Team 4 (Clay, Neil, John, Mark)
 
-Our project is to develop a web application using Machine Learning to interpret the 26 letters of the sign language alphabet.  The user will use their web camera to show a sign, and our model will predict what letter they are presenting.
+Our project is to develop a web application using Machine Learning to train a model which will interpret the 26 letters of the sign language alphabet.  The user will use their web camera to show a sign, and our model will predict what letter they are presenting.
 
 We will train our model using the following database which contains 4,000+ images (~155 per letter, 4 different camera angles):
 
