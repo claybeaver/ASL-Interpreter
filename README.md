@@ -22,7 +22,7 @@ Bonus: Not only would we like to be able to present the Letter the user is holdi
 
 ### Webpage Example:
 
-![Webpage Example](Images/webexample.png)
+![Webpage Example](Images/Website_Example.png)
 
 
 
