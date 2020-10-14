@@ -4,9 +4,9 @@
 
 Our project is to develop a web application using Machine Learning to train a model which will interpret the 26 letters of the sign language alphabet.  The user will use their web camera to show a sign, and our model will predict what letter they are presenting.
 
-We will train our model using the following database which contains 4,000+ images (~155 per letter, 4 different camera angles):
+We will train our model using the following database which contains 87,000 images which are 200x200 pixels.
 
-https://data.mendeley.com/datasets/jzy8zngkbg/4
+https://www.kaggle.com/grassknoted/asl-alphabet
 
 ### Technical Skills:
 
