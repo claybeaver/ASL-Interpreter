@@ -11,6 +11,8 @@ https://www.kaggle.com/grassknoted/asl-alphabet
 ### Technical Skills:
 
 *	Python
+* Jupyter Notebook
+* Pandas
 *	Scikit-Learn
 *	Tensorflow
 *	Numpy
@@ -23,3 +25,26 @@ Bonus: Not only would we like to be able to present the Letter the user is holdi
 ### Webpage Example:
 
 ![Webpage Example](Readme_Images/Website_Example.png)
+
+## Jupyter Notebook / Pandas
+
+### Create a list for the number and letter coresponding to the image names
+![Jupiter1](Readme_Images/Jupiter_Notebook_Code_1.png)
+
+### Dataframe 
+![Jupiter2](Readme_Images/Jupiter_Notebook_Code_2.png)
+
+## Train Data
+
+### Loop of a loop that coresponds to the image names. Loop through images in folder. Preprocess Images. Append image to a list in form of array.
+![Jupiter3](Readme_Images/Jupiter_Notebook_Code_3.png)
+
+### Training our model
+![Jupiter4](Readme_Images/Jupiter_Notebook_Code_4.png)
+
+![Jupiter5](Readme_Images/Jupiter_Notebook_Code_5.png)
+
+## Web Camera Recognition
+
+### Create a python function to use webcam to capture screenshots
+![Python1](Readme_Images/Webcam_Recognition_Code_1.png)
