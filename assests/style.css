@@ -1,0 +1,13 @@
+body {
+    background-color: lightcyan;
+  }
+.menu ul{
+  display:inline-flex
+}
+.mene ul li{
+   list-style: none;
+  cursor: pointer;
+}
+*{
+  font-family: sans-serif;
+}
