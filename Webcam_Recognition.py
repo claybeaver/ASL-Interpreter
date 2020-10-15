@@ -20,14 +20,13 @@ def show_webcam(mirror=False):
     while True:
         ret, frame = cam.read()
         frame = cv2.flip(frame, 1)
-        cv2.line
         
         xmin = 384
         xmax = 584
         ymin = 100
         ymax = 300
 
-        square = cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), (0,0, 225), 3)
+        square = cv2.rectangle(frame, (xmin-2,ymin-2), (xmax+2,ymax+2), (0,0, 225), 2)
         
         if not ret:
             print("~~~~~~~  Try Again  ~~~~~~~")
