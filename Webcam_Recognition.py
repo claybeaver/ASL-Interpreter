@@ -19,10 +19,10 @@ def show_webcam(mirror=False):
 
     while True:
         ret, frame = cam.read()
-        frame = cv2.flip(frame, 1)
+        # frame = cv2.flip(frame, 1)
         
-        xmin = 384
-        xmax = 584
+        xmin = 50
+        xmax = 250
         ymin = 100
         ymax = 300
 
