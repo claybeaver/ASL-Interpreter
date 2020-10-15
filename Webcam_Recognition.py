@@ -19,14 +19,14 @@ def show_webcam(mirror=False):
 
     while True:
         ret, frame = cam.read()
-        # frame = cv2.flip(frame, 1)
+        # frame = cv2.flip(frame, 1)  #-------------> To remove mirror imaging
         
         xmin = 50
         xmax = 250
         ymin = 100
         ymax = 300
 
-        square = cv2.rectangle(frame, (xmin-2,ymin-2), (xmax+2,ymax+2), (0,0, 225), 2)
+        cv2.rectangle(frame, (xmin-2,ymin-2), (xmax+2,ymax+2), (0,0, 225), 2)
         
         if not ret:
             print("~~~~~~~  Try Again  ~~~~~~~")
