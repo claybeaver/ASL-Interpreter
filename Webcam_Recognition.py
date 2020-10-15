@@ -19,7 +19,7 @@ def show_webcam(mirror=False):
 
     while True:
         ret, frame = cam.read()
-        # frame = cv2.flip(frame, 1)  #-------------> To remove mirror imaging
+        # frame = cv2.flip(frame, 1)  #-------------> To activate mirror imaging
         
         xmin = 50
         xmax = 250
@@ -35,10 +35,10 @@ def show_webcam(mirror=False):
         
         k = cv2.waitKey(1)
         if k%256 == 27:  #--------------------> ESC pressed 
-            print("~~~~~~~  Closing Program  ~~~~~~~")
+            print("~~~~~~~~~~~~  Terminating Program  ~~~~~~~~~~~~")
             break
         elif k%256 == 32:  #------------------> SPACE pressed
-            img_name = "hand_capture_{}.png".format(img_counter)
+            img_name = "hand_capture_{}.jpg".format(img_counter)
             cv2.imwrite(img_name, frame[ymin:ymax, xmin:xmax]) #------> Crop to image to ROI
             print("~~~~~~~  {} has been saved  ~~~~~~~".format(img_name))
             img_counter += 1
