@@ -46,5 +46,5 @@ Bonus: Not only would we like to be able to present the Letter the user is holdi
 
 ## Web Camera Recognition
 
-### Create a python function to use webcam to capture screenshots
-![Python1](Readme_Images/Webcam_Recognition_Code_1.png)
+### Create a python function to use webcam to capture segmented Screenshot of hand region
+![Python1](Readme_Images/Webcam_Recognition_Code_2.png)
