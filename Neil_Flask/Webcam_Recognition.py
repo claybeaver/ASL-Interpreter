@@ -20,6 +20,7 @@ class VideoCamera(object):
         ymax2 = 300
 
         retval, image = self.video.read()
+        image = cv2.flip(image, 1) 
         cv2.rectangle(image, (xmin-2,ymin-2), (xmax+2,ymax+2), (0,0, 225), 2)
         retval, jpeg = cv2.imencode('.jpg', image)
         k = cv2.waitKey(1)
