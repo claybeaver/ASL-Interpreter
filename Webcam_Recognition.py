@@ -41,8 +41,10 @@ def show_webcam(mirror=False):
         elif k%256 == 32:  #------------------> SPACE pressed
             retval, image = cam.read()
             cropped = image[ymin:ymax, xmin:xmax]
+            cropped = cv2.cvtColor(cropped, cv2.COLOR_BGR2GRAY)
             retval, buffer = cv2.imencode('.jpg', cropped)
             jpg_as_text = base64.b64encode(buffer)
+            print(jpg_as_text) #-----------------> Test print for base64 string
             # img_name = "hand_capture_{}.jpg".format(img_counter)
             # cv2.imwrite(img_name, frame[ymin:ymax, xmin:xmax]) #------> Crop to image to ROI
             # print("~~~~~~~  {} has been saved  ~~~~~~~".format(img_name))
