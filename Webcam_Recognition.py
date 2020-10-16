@@ -15,7 +15,7 @@ import base64
 
 def show_webcam(mirror=False):
 
-    cam = cv2.VideoCapture(0)                       #-------------> Set to 0 (for using camera) or 1 (if using built in webcam)
+    cam = cv2.VideoCapture(0)                       #-------------> Set to 0 (if using built in webcam) or 1 (for using camera)
     # img_counter = 1                               #-------------> Used for saving images to local computer
 
     while True:
