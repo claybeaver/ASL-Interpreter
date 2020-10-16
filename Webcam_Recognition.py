@@ -11,10 +11,11 @@
 
 
 import cv2
+import base64
 
 def show_webcam(mirror=False):
 
-    cam = cv2.VideoCapture(0)
+    cam = cv2.VideoCapture(1)
     img_counter = 1
 
     while True:
@@ -38,10 +39,15 @@ def show_webcam(mirror=False):
             print("~~~~~~~~~~~~  Terminating Program  ~~~~~~~~~~~~")
             break
         elif k%256 == 32:  #------------------> SPACE pressed
-            img_name = "hand_capture_{}.jpg".format(img_counter)
-            cv2.imwrite(img_name, frame[ymin:ymax, xmin:xmax]) #------> Crop to image to ROI
-            print("~~~~~~~  {} has been saved  ~~~~~~~".format(img_name))
-            img_counter += 1
+            retval, image = cam.read()
+            cropped = image[ymin:ymax, xmin:xmax]
+            retval, buffer = cv2.imencode('.jpg', cropped)
+            jpg_as_text = base64.b64encode(buffer)
+            print(jpg_as_text)
+            # img_name = "hand_capture_{}.jpg".format(img_counter)
+            # cv2.imwrite(img_name, frame[ymin:ymax, xmin:xmax]) #------> Crop to image to ROI
+            # print("~~~~~~~  {} has been saved  ~~~~~~~".format(img_name))
+            # img_counter += 1
 
     cam.release()
 
