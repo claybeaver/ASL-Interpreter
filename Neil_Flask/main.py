@@ -12,9 +12,8 @@ def camera():
 
 @app.route('/image', methods=['GET','POST'])
 def signup():
-    print('Test')
     if request.method == 'POST':
-        return jsonify(request.form['userID'], request.form['file'])
+        return jsonify(request.form['file'])
     return render_template('image.html')
 
 

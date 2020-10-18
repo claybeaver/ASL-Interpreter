@@ -51,9 +51,16 @@
     </div>
 
   <div class="container">
-    <div class="jumbotron">
-      <h1 class="display-2">Video</h1>
-          <p>Please make your sign in the GREEN square above</p>
+    <div class="row">
+      <div class = col-md-4>
+      <div id="my_camera" style="width:200px; height:200px;"><h1 class="display-2">Video</h1></div>
+      <a href="javascript:void(take_snapshot())">Take Snapshot</a>
+      </div>
+      <div class = col-md-4>You spelled the letter A in American Sign Language!</div>
+      <div class = col-md-4>
+      <div id="my_result"><p>Please make your sign in the GREEN square above</p></div>
+      </div>
+
     </div>
   </div>
 
@@ -75,5 +82,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+
+<script src="static/webcam.js"></script>
+
+<div id="my_camera" style="width:200px; height:200px;"></div>
+<div id="my_result"></div>
+
+<script language="JavaScript">
+  Webcam.set({
+    width: 320,
+    height: 240,
+    image_format: 'jpeg',
+    jpeg_quality: 90,
+    crop_width: 200,
+    crop_height: 200
+  });
+  Webcam.attach( '#my_camera' );
+  
+  function take_snapshot() {
+    Webcam.snap( function(data_uri) {
+      document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
+      console.log(data_uri)
+      sessionStorage.setItem("data",data_uri)
+    } );
+  }
+  
+
+  
+</script>
+
+
 
 </html>
