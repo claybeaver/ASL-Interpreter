@@ -1,21 +1,27 @@
-
-from flask import Flask, render_template, Response, request
-from Webcam_Recognition import VideoCamera
-import cv2
+from flask import Flask, render_template, Response, request, jsonify
 
 app = Flask(__name__)
+
 
 @app.route('/')
 def camera():
     return render_template('index.html')
 
 
-@app.route('/image', methods=['GET','POST'])
+@app.route('/image', methods=['GET', 'POST'])
 def signup():
-    print('Test')
-    if request.method == 'POST':
-        return jsonify(request.form['userID'], request.form['file'])
-    return render_template('image.html')
+    incoming_pkg = request.get_json()
+    img_b64_str_encoded = str(incoming_pkg['imgBase64'])
+    image_array = img_b64_str_encoded.split(',')
+    image = image_array[len(image_array) - 1]
+    app.logger.info("Processing and Predicting Which Digit ...")
+    print(image)
+
+    # prediction = int(img_predict(img_b64_str_encoded))
+    # response = f'{prediction}'
+    # app.logger.info(f'Received prediction :: {jsonify(prediction=response)}')
+
+    return jsonify(response=image)
 
 
 if __name__ == '__main__':
