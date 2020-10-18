@@ -1,4 +1,5 @@
 from flask import Flask, render_template, Response, request, jsonify
+from Prediction import predict
 
 app = Flask(__name__)
 
@@ -15,13 +16,13 @@ def signup():
     image_array = img_b64_str_encoded.split(',')
     image = image_array[len(image_array) - 1]
     app.logger.info("Processing and Predicting Which Digit ...")
-    print(image)
+    prediction = predict(image)
 
     # prediction = int(img_predict(img_b64_str_encoded))
     # response = f'{prediction}'
     # app.logger.info(f'Received prediction :: {jsonify(prediction=response)}')
 
-    return jsonify(response=image)
+    return jsonify(response=prediction)
 
 
 if __name__ == '__main__':
