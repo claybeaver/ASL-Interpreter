@@ -12,3 +12,10 @@ body {
 footer {
   color: White
 }
+
+.prediction {
+  color: black;
+  text-align: center;
+  font-size: 150px;
+  font-weight: bold;
+}

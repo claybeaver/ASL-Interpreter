@@ -6,6 +6,8 @@
     <script src="static/jquery-3.5.1.js"></script>
     <script src="static/jquery.redirect.js"></script>
     <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 
@@ -66,7 +68,8 @@
                 <a href="javascript:void(take_snapshot())">Take Snapshot</a>
                 </div>
             </div>
-            <div class=col-md-4>You spelled the letter A in American Sign Language!
+            <div class=col-md-4>
+                <div class="prediction" id='prediction'></div>
             </div>
             <div class=col-md-4>
                 <div id="my_result"><p>Please make your sign in the GREEN square above</p>
@@ -106,6 +109,8 @@
 
             request.done(function (resp) {
                 console.log(`receive msg from server ${resp.response}`);
+                var response = resp.response;
+                document.getElementById('prediction').innerHTML = response;
             });
 
             request.fail(function (jqXHR, textStatus) {
