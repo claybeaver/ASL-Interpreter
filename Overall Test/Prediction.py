@@ -16,7 +16,7 @@ def predict(base64string):
     imgdata = base64.b64decode(base64string)
     img = PIL.Image.open(io.BytesIO(imgdata))
     # img = image.load_img(img, target_size = (100,100,3), color_mode = "rgb")
-    img = img.resize((200, 200)).convert(mode='L')
+    img = img.resize((100, 100))
     img = image.img_to_array(img)
     img = img/255
     train_image.append(img)
