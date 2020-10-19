@@ -34,18 +34,16 @@ footer {
 }
 
 .portfolioHeader {
-  background-color: rgba(34, 54, 133, 0.823);
-  width: 800px;
-  height: 80px;
+  background-color: rgba(71, 149, 221, 0.823);
+  width: auto;
+  height: auto;
   margin: auto;
-  text-align: center;
+  text-align: justify;
   border: 10px solid rgb(243, 155, 23);
   padding: 50px;
   margin: 15px;
   border-radius: 8px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 h1 {
@@ -84,7 +82,7 @@ h1 {
 }
 
 .navbar-light {
-  background-color: #eaeef1;
+  background-color: #e8eaec;
 }
 
 .navbar-custom .navbar-brand,
