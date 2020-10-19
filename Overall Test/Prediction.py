@@ -1,38 +1,28 @@
+import io
+import PIL
 import base64
 import numpy as np
-import pandas as pd
-import tensorflow as tf
+
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
-from sklearn.preprocessing import LabelEncoder
-
-import io
-import PIL
-
 
 def predict(base64string):
-    train_image = []
-    imgdata = base64.b64decode(base64string)
-    img = PIL.Image.open(io.BytesIO(imgdata))
-    # img = image.load_img(img, target_size = (100,100,3), color_mode = "rgb")
+    images_to_predict = []
+    image_data = base64.b64decode(base64string)
+    img = PIL.Image.open(io.BytesIO(image_data))
     img = img.resize((100, 100)).convert(mode="L")
     img = image.img_to_array(img)
     img = img/255
-    train_image.append(img)
-    X = np.array(train_image)
+    images_to_predict.append(img)
+    array_of_images_to_predict = np.array(images_to_predict)
 
-    model = load_model('model_1.h5', compile = True)
+    model = load_model('model_1.h5')
 
-    images_names = pd.read_csv('../Image Values2.csv')
-    labels = images_names['Image Value'].values
-    label_encoder = LabelEncoder()
-    label_encoder.fit(labels)
+    predictions = model.predict(array_of_images_to_predict)
+    class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y']
+    prediction_labels = class_names[np.argmax(predictions)]
 
-    encoded_predictions = model.predict_classes(X[:])
-    prediction_labels = label_encoder.inverse_transform(encoded_predictions)
-    print('######## PREDICTION #########')
-    print(prediction_labels)
-    print('######## PREDICTION #########')
-    return prediction_labels[0]
-
+    letter_predicted = prediction_labels[0]
+    print(f'## Prediction from image received: {letter_predicted} ##')
+    return letter_predicted
