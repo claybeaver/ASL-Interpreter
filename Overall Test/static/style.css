@@ -44,7 +44,6 @@ footer {
   margin: 15px;
   border-radius: 8px;
   display: flex;
-  position: relative;
 }
 
 h1 {
@@ -104,3 +103,7 @@ h1 {
 }
 p
 {color: white;}
+
+footer {
+  color: White
+}
