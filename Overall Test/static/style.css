@@ -51,7 +51,7 @@ h1 {
 }
 
 .navbar-brand {
-  color: rgb(219, 224, 226);
+  color: rgb(255, 255, 255);
 }
 
 .col-md-4 {
@@ -76,13 +76,13 @@ h1 {
 }
 
 .navbar-brand {
-  text-align: left;
+  text-align: right;
   font-size: 30px;
-  color: rgb(227, 228, 228);
+  color: rgb(255, 255, 255);
 }
 
 .navbar-light {
-  background-color: #e8eaec;
+  background-color: #ffffff;
 }
 
 .navbar-custom .navbar-brand,
@@ -101,3 +101,5 @@ h1 {
   width: 600px;
   float: center;
 }
+p
+{color: white;}
