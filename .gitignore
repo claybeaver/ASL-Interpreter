@@ -2,7 +2,9 @@
 
 HGM-4/
 asl_alphabet_train/
-
+Model Training/asl_alphabet_train/
+Model Training/asl_alphabet_test/
+asl_alphabet_test/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
