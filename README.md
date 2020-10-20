@@ -21,4 +21,4 @@ For our project we developed a web application to predict sign language letters 
 
 ### Webpage Example:
 
-![Webpage Example](Readme_Images/Webpage_Example_2.png)
+![Webpage Example](Readme_Images/Webpage_Example_3.png)
