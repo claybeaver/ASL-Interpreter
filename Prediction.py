@@ -18,7 +18,7 @@ def predict(base64string):
     images_to_predict.append(img)
     array_of_images_to_predict = np.array(images_to_predict)
 
-    model = load_model('model_1.h5')
+    model = load_model('model/model_1.h5')
 
     predictions = model.predict(array_of_images_to_predict)
     class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
