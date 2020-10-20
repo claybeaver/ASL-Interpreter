@@ -1,12 +1,12 @@
 # American Sign Language Interpreter
 
-## Project Outline
+## Clay Beaver, Neil Vora, John Boer, Mark Alcocer
 
-### Project 3 – Team 4 (Clay, Neil, John, Mark)
+### Project Outline
 
 For our project we developed a web application to predict sign language letters using a Machine Learning model.  Our model is trained to interpret the 26 letters of the sign language alphabet.  The user will use their web camera to show a hand sign, and our model will predict which letter they are presenting.
 
-### Technical Skills:
+#### Technical Skills:
 
 *	Python
 * Jupyter Notebook
@@ -19,6 +19,6 @@ For our project we developed a web application to predict sign language letters 
 *	JavaScript
 * Flask
 
-### Webpage Example:
+#### Webpage Example:
 
-![Webpage Example](Readme_Images/Webpage_Example_3.png)
+![Webpage Example](Readme_Images/Webpage_Example_4.png)
