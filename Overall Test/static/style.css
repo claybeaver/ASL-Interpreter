@@ -46,7 +46,7 @@ footer {
   padding: 50px;
   margin: 15px;
   border-radius: 5px;
-  display: flex;
+  text-justify: auto;
 }
 
 h1 {
@@ -133,5 +133,5 @@ footer {
 }
 
 .padding {
-  padding-top: 30px;
+  padding-top: 50px;
 }
