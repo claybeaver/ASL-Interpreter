@@ -6,6 +6,10 @@
 
 For our project we developed a web application to predict sign language letters using a Machine Learning model.  Our model is trained to interpret the 26 letters of the sign language alphabet.  The user will use their web camera to show a hand sign, and our model will predict which letter they are presenting.
 
+### Link to Web Application:
+
+https://asl-alphabet-translate.herokuapp.com/
+
 #### Technical Skills:
 
 *	Python
