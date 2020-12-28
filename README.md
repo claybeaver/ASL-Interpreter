@@ -22,7 +22,9 @@ https://asl-alphabet-translate.herokuapp.com/
 *	HTML/CSS
 *	JavaScript
 * Flask
+* Convolutional Nueral Networks
+* Machine Learning
 
-#### Webpage Example:
+#### Webpage Screenshot:
 
 ![Webpage Example](Readme_Images/Webpage_Example_4.png)
